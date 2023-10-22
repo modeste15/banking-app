@@ -11,13 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('comptes', function (Blueprint $table) {
+        Schema::create('liste_permisions', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('solde');
-            $table->bigInteger('decouvert');
-            $table->bigInteger('somme');
-            $table->bigInteger('client_id');
-            
+            $table->foreign('permission_id')->references('id')->on('clients');
+            $table->foreign('compte_id')->references('id')->on('comptes');
             $table->timestamps();
         });
     }
@@ -27,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('comptes');
+        Schema::dropIfExists('liste_permisions');
     }
 };
