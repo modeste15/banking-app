@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('comptes', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('somme');
             $table->timestamps();
         });
     }
