@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
             $table->string('description');
+            $table->string('reference');
             $table->bigInteger('somme');
             $table->foreignId('compte_source')->references('id')->on('comptes');
             $table->foreignId('compte_destination')->references('id')->on('comptes');

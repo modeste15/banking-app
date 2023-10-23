@@ -6,25 +6,32 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class PermissionSeeder extends Seeder
+
+class TypeCompteSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        DB::table('permissions')->insert([
+        DB::table('type_comptes')->insert([
             [
-                'libelle' => "SEND_INTERNE",
+                'libelle' => "EPARGNE",
             ],
             [
-                'libelle' => "SEND_EXTERNE",    
+                'libelle' => "COURANT",
             ],
             [
-                'libelle' => "UPDATE_ADRESSE",
+                'libelle' => "LIVRETA",
             ],
             [
-                'libelle' => "UPDATE_INFO",
+                'libelle' => "LDDS",
+            ],
+            [
+                'libelle' => "LEP",
+            ],
+            [
+                'libelle' => "PEA",
             ],
         ]);
     }
