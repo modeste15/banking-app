@@ -14,13 +14,10 @@ return new class extends Migration
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
             $table->string('description');
-            $table->string('compte_source');
-            $table->string('compte_destination');
-            $table->string('type_transaction_id');
             $table->bigInteger('somme');
-            $table->foreign('compte_source')->references('id')->on('comptes');
-            $table->foreign('compte_destination')->references('id')->on('comptes');
-            $table->foreign('type_transaction_id')->references('id')->on('type_transactions');
+            $table->foreignId('compte_source')->references('id')->on('comptes');
+            $table->foreignId('compte_destination')->references('id')->on('comptes');
+            $table->foreignId('type_transaction_id')->references('id')->on('type_transactions');
             $table->timestamps();
         });
     }

@@ -16,8 +16,8 @@ return new class extends Migration
             $table->bigInteger('solde');
             $table->bigInteger('decouvert');
             $table->bigInteger('somme');
-            $table->bigInteger('client_id');
-            
+            $table->string('iban')->nullable();
+            $table->foreignId('client_id')->references('id')->on('clients');
             $table->timestamps();
         });
     }

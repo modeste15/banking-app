@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('liste_permisions', function (Blueprint $table) {
             $table->id();
-            $table->foreign('permission_id')->references('id')->on('clients');
-            $table->foreign('compte_id')->references('id')->on('comptes');
+            $table->foreignId('permission_id')->references('id')->on('clients');
+            $table->foreignId('compte_id')->references('id')->on('comptes');
             $table->timestamps();
         });
     }
