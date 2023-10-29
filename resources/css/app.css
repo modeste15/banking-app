@@ -7774,6 +7774,10 @@
     margin-top: 3rem !important;
   }
   
+  .my-10 {
+    margin-top: 12rem !important;
+  }
+  
   .mr-5,
   .mx-5 {
     margin-right: 3rem !important;
@@ -9901,8 +9905,8 @@
   
   .bg-gradient-primary {
     background-color: #4e73df;
-    background-image: linear-gradient(180deg, #4e73df 10%, #224abe 100%);
-    background-size: cover;
+    background-image: linear-gradient(180deg, #c4d2fb 10%, #6a98e1 100%);
+        background-size: cover;
   }
   
   .bg-gradient-secondary {
@@ -10861,7 +10865,7 @@
   }
   
   .bg-login-image {
-    background: url("https://source.unsplash.com/K4mSJ7kc0As/600x800");
+    background: url("../sbadmin/img/money.jpg");
     background-position: center;
     background-size: cover;
   }
